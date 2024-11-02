@@ -1,0 +1,21 @@
+{% extends 'base_template.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="info">
+    <div class="title">
+        <p style="color:orange;">Hello!</p>
+        <h1>
+            <span style="color:white">I'm</span> 
+            <span style="color:orange">Quan</span> 
+            <span style="color:orange">Huynh</span>
+        </h1> 
+        <h3>Software Developer</h3>
+        <div class="button"><a href="{% url 'about' %}">More about me</a></div>
+    </div>
+    <div class="picture">
+        <img src="{% static 'tải xuống.png' %}" alt="Description of Image">
+    </div>
+</div>
+{% endblock %}

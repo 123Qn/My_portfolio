@@ -1,0 +1,82 @@
+
+{% extends 'base_template.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+
+{% block content %}
+<div class="info">
+    <div class="picture">
+        <img src="{% static 'tải xuống.png' %}" alt="Description of Image">
+    </div>
+    <div class="title">
+        <p style="color:orange;">Who am I ?</p>
+        <h3>
+         I'm Quan Huynh , a software developer,UI designer
+        </h3> 
+        <p style="width: 300px; word-wrap: break-word;color:white">I have </p>
+        <hr>
+        <div>Years of code:<span style="color:orange"> 2</span></div>
+        <div>Age :<span style="color:orange"> 20</span></div>
+        <div>Number of projects to now:<span style="color:orange"> 5</span></div>
+    </div>    
+</div>
+<h3 class="myskill">My Skills</h3>
+<div class="grid-container">
+    <div class="grid-item">
+        <div class="front">
+            <img style="width: 30px; height: 30px;" src="{% static 'world-wide-web.png' %}" alt="Web Icon">
+            <span>Web</span>
+        </div>
+        <div class="back">
+            <ul>
+                <li>HTML Game</li>
+                <li>Cafeteria Website</li>
+                <li>Travel Blog</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grid-item">
+        <div class="front">
+        <img style="width: 30px; height: 30px;" src="{% static 'python.png' %}" alt="Description of Image">
+        <span>Python</span>
+        </div>
+        <div class="back">
+            <ul>
+                <li>Object Detection</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grid-item">
+        <div class="front">
+        <img style="width: 30px; height: 30px;" src="{% static 'java.png' %}" alt="Description of Image">
+            <span>Java</span>
+        </div>
+        <div class="back">
+            <p>New PvZ game</p>
+        </div>
+    </div>
+    <div class="grid-item">
+        <div class="front">
+        <img style="width: 30px; height: 30px;" src="{% static 'embed.png' %}" alt="Description of Image">
+            <span>Embedded System</span>
+        </div>
+        <div class="back">
+            <ul>
+            <li>Smoke Detect sensor</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grid-item">
+        <div class="front">
+        <img style="width: 30px; height: 30px;" src="{% static 'web-design.png' %}" alt="Description of Image">
+            <span>Design</span>
+        </div>
+    </div>
+    <div class="grid-item">
+        <div class="front">
+        <img style="width: 30px; height: 30px;" src="{% static '3d-modeling.png' %}" alt="Description of Image">
+            <span>3D</span>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Portfolio{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="navigator">
+            <a class="logo">MyPortfolio</a>
+            <div class="navigator-links">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'resume' %}">Resume</a>
+                <a href="{% url 'project' %}">Project</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        
+        
+        {% endblock %}
+    </main>
+
+    <footer>
+        <h3>Contact :</h3>
+        <div class="footer">
+           <div class="email">
+            <span style="color:orange">Email:</span>
+            <span style="color:rgb(3, 224, 224)">quanhuynhvt2004@gmail.com </span>
+           </div>
+           <div class="phone">
+            <span style="color:orange">Phone:</span>
+            <span style="color:rgb(3, 224, 224)">0475451006</span>
+           </div>
+           <div class="github">
+            <span style="color:orange">GitHub:</span>
+            <span style="color:rgb(3, 224, 224)">quan123</span>
+           </div>
+        </div>
+    </footer>
+</body>
+</html>

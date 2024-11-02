@@ -1,0 +1,309 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Styles */
+.navigator {
+    display: flex;
+    align-items: center; /* Vertically centers items */
+    padding: 10px 20px;
+    background-color: #743c0f;
+    height: 60px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Added shadow for depth */
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.8rem; /* Increased size for prominence */
+    text-decoration: none;
+    color: white;
+    margin-right: auto; /* Pushes the rest of the items to the right */
+}
+
+.navigator-links {
+    display: flex;
+    gap: 40px; /* Space between links */
+    justify-content: center; /* Centers links in the remaining space */
+    flex-grow: 1; /* Allows the navigator-links to take up available space */
+}
+
+.navigator-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem; /* Slightly larger for better readability */
+    transition: color 0.3s, transform 0.3s; /* Added transition for hover effect */
+}
+
+.navigator-links a:hover {
+    color: orange;
+    text-decoration: underline;
+    transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
+/* Info Section */
+.info {
+    margin-top: 30px;
+    color: #03e0e0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.picture img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.title .highlight-text,
+.title .highlight {
+    color: orange;
+}
+
+.description {
+    width: 300px;
+    word-wrap: break-word;
+    color: white;
+}
+
+/* Button */
+.button {
+    background-color: #ff9500;
+    padding: 15px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: black;
+    text-align: center;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Added transform transition */
+}
+
+.button a {
+    text-decoration: none;
+    color: black; /* Added color to the link */
+}
+
+.button:hover {
+    background-color: #ff6400;
+    transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
+.button:active {
+    background-color: #000;
+    color: white;
+}
+
+/* Footer */
+/* Footer */
+footer {
+    background-color: #111; /* Dark background for contrast */
+    color: white; /* White text for better readability */
+    padding: 20px 0; /* Top and bottom padding */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    margin-top: 20px; /* Space above the footer */
+}
+
+.footer {
+    margin-top: 10px; /* Space below the footer */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Distribute space evenly between items */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Maximum width for larger screens */
+}
+
+/* Footer Links */
+.footer a {
+    color: #ffd683; /* Light color for footer links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.footer a:hover {
+    color: orange; /* Change color on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Stack items on small screens */
+        gap: 10px; /* Space between stacked items */
+    }
+}
+
+/* Skills Grid */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+.grid-item {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+/* Assign different colors for each grid item */
+.grid-item:nth-child(1) .front {
+    background-color: #FF5733; /* Bright Red */
+}
+
+.grid-item:nth-child(2) .front {
+    background-color: #FFBF33;
+    /* Bright Green */
+}
+
+.grid-item:nth-child(3) .front {
+    background-color: #3357FF; /* Bright Blue */
+}
+
+.grid-item:nth-child(4) .front {
+    background-color: #FF33A8; /* Bright Pink */
+}
+
+.grid-item:nth-child(5) .front {
+    background-color: #33FF57; /* Bright Yellow */
+}
+
+.grid-item:nth-child(6) .front {
+    background-color: #33FFF5; /* Bright Cyan */
+}
+
+.grid-item .front,
+.grid-item .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 18px;
+    transition: transform 0.6s, box-shadow 0.3s; /* Added shadow transition */
+}
+
+.back {
+    background-color: #333; /* Keep the back color consistent */
+    transform: rotateY(180deg);
+}
+
+li {
+    font-size: smaller;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+.grid-item:hover .front,
+.grid-item:focus-within .front {
+    transform: rotateY(180deg);
+}
+
+.grid-item:hover .back,
+.grid-item:focus-within .back {
+    transform: rotateY(0deg);
+}
+
+/* Skills Title */
+.myskill {
+    text-align: center;
+    margin: 20px 0;
+    color: #03e0e0;
+}
+
+/* Resume */
+section {
+    background-color: rgb(254, 233, 233);
+    width: 50%;
+    margin-left: 25%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    border-radius: 10px; /* Added border radius for section */
+    overflow: hidden; /* Ensure no overflow from rounded corners */
+}
+
+.left-side {
+    background-color: rgb(255, 202, 136);
+    margin-left: 2%;
+    width: 40%;
+    margin-bottom: 1%;
+    border-radius: 50px 0px 0 50px;
+}
+
+.right-side {
+    background-color: rgb(254, 233, 233);
+    width: 60%;
+}
+
+.left-side img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.left-side h3,
+.left-side p,
+.right-side h3,
+.right-side p {
+    margin-left: 10%;
+    color: #000;
+}
+
+hr {
+    border: none; 
+    height: 2px; 
+    background-color: #000; 
+    width: 90%;
+    margin-right: 0;
+}
+
+.name {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Align items in a column */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Align text to the center */
+    background-color: grey; /* Background color */
+    height: 100px; /* Height to provide space for text */
+    width: 100%; /* Full width */
+    border-radius: 0px 10px 10px 0px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    padding: 10px; /* Add padding for better spacing */
+}
+
+.name h2 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.5rem; /* Slightly larger font size */
+    color: #ffd683; /* Text color */
+}
+
+.name p {
+    margin: 5px 0 0; /* Margin above and below the paragraph */
+    font-size: 1rem; /* Font size for the description */
+    color: #ffd683; /* Text color */
+}
